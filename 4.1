@@ -1,0 +1,132 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a = 0;
+
+    cin >> a;
+
+    a = a - 1;
+
+    int arr[a];
+
+    if ( a >= 0 )
+    {
+        for ( int b = 0; b <= a; b++ )
+        {
+            cin >> arr[b];
+        }
+
+
+
+        cout  << "ARRAY: ";
+        for ( int b = 0; b <= a; b++ )
+        {
+            cout << arr[b] << " ";
+        }
+        cout << endl;
+
+
+ 
+        cout << "EVEN: ";
+        for ( int b = 0; b <= a; b++)
+        {
+            if ( arr[b] % 2 == 0 )
+            {
+                cout << arr[b] << " ";
+            }
+        }
+        cout << endl;
+
+
+
+        int sum = 0;
+        for ( int b = 0; b <= a; b++ )
+        {
+            sum = sum + arr[b];
+        }
+        cout << "SUM: ";
+        cout << sum;
+        cout << endl;
+
+
+
+        int product = 1;
+        for ( int b = 0; b <= a; b++ )
+        {
+            if ( arr[b] < 0 )
+            {
+                product = product * arr[b];
+            }
+        }
+        if ( product != 1 )
+        {
+            cout << "PRODUCT OF NEGATIVE: "; 
+            cout << product; 
+            cout << endl;
+        }
+
+
+        int min_ind = 1000 * 1000;
+        int min = 1000 * 1000;
+        for ( int b = 0; b <= a; b++ )
+        {
+            if ( arr[b] < min )
+            {
+                min = arr[b];
+                min_ind = b;
+            }
+        }
+        cout << "FIRST MIN INDEX: "; 
+        cout << min_ind; 
+        cout << endl;
+
+
+        int first_max = 0;
+        int sec_max = 0;
+        for ( int b = 0; b <= a;b++ )
+        {
+            if ( arr[b] > first_max )
+            {
+                sec_max = first_max;
+                first_max = arr[b];
+            }
+        }
+        if ( a > 0 )
+        {
+            cout << "SECOND MAX: "; 
+            cout << sec_max; 
+            cout << endl;
+        }
+
+
+        int c = a;
+        cout << "REVERSE: ";
+        for ( c; c >= 0; c = c - 1 )
+        {
+            cout << arr[c]; 
+            cout << " ";
+        }
+        cout << endl;
+
+
+        cout << "ODD INDEXES: ";
+        for ( int b = 0; b <= a; b++ )
+        {
+            if ( b % 2 == 1 )
+            {
+                cout << arr[b];
+                cout << " ";
+            }
+        }
+        cout << endl;
+
+
+
+    }
+
+    return EXIT_SUCCESS;
+}
+      
