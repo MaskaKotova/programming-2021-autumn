@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+main()
+{
+   int x;
+   int mx;
+   int mn;
+   int i=2;
+   
+   cin » mn;
+   cin » mx;
+   
+   while (cin»x)
+   {
+      i++;
+      if(i%2)
+   {
+      if ( x<mn )mn=x;
+   }
+      else if ( x>mx )mx=x;
+   }
+   cout « mx+mn;
+}
