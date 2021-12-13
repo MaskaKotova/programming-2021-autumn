@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main (int argc, char* argv[])
+{
+   double a = 0;
+   
+   cin >> a;
+   
+   long long value = *((long long*) & a);
+   long long one = 1;
+   long long abs = ~(~value | (one << sizeof(double) * 8 - 1));
+   double abs2 = *((double*) & abs);
+   
+   cout << abs2;
+   cout << endl;
+   
+   return EXIT_SUCCESS;
+}
