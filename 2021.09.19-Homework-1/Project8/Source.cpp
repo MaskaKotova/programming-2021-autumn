@@ -29,5 +29,5 @@ int main(int argc, char* argv[])
    cout << g;
    cout << endl;
 
-	return EXIT_SUCCESS;
+   return EXIT_SUCCESS;
 }
